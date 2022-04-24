@@ -6,6 +6,7 @@
         <title>Moz Coding Cheatsheet</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -15,14 +16,12 @@
         <header>
             <nav>
                 <ul>
-                    <a href="index.html"><li>HMTL</li></a>
+                    <a href="index.html"><li>HTML</li></a>
                     <a href="css_page.html"><li>CSS</li></a>
                     <a href=""><li>Projects</li></a>
                 </ul>
             </nav>
         </header>
-
-        <h1>HTML</h1>
 
         <div class="shortcutbox">
             <a href="#link2elements">Elements</a>
@@ -30,254 +29,260 @@
             <a href="">TBD</a>          
         </div>
 
-        <div id="link2elements"></div>
-        <h2 id="h2elements">Elements and Structure</h2>
+        <main>           
+            <h1>HTML</h1>
 
-        <br>
-                
-        <table id="elementtable">
-            <thead>
-                <tr>
-                    <th>Element</th>
-                    <th>Example Code</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&lt;video&gt; Video Element
-                    </td>
-                    <td>&lt;video src="test-video.mp4" controls&gt;Video not supported
-                    &lt;/video&gt;
-                    </td>
-                    <td>The &lt;video&gt; element embeds a media player for video playback. The src attribute will contain the URL to the video. Adding the controls attribute will display video controls in the media player.
-                    <br><br>
-                    Note: The content inside the opening and closing tag is shown as a fallback in browsers that don't support the element.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;img&gt; Image Element
-                    </td>
-                    <td>&lt;img src="url" alt="text" /&gt;
-                    </td>
-                    <td>HTML image &lt;img&gt; elements embed images in documents. The src attribute contains the image URL and is mandatory. &lt;img&gt; is an empty element meaning it should not have a closing tag. The alternative text will be displayed if an image fails to render.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;body&gt; Body Element
-                    </td>
-                    <td></td>
-                    <td>The &lt;body&gt; element represents the content of an HTML document. Content inside &lt;body&gt; tags are rendered on the web browsers. Note: There can be only one &lt;body&gt; element in a document.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;a&gt; Anchor Element
-                    </td>
-                    <td>&lt;a href="url"&gt;Visit this site&lt;/a&gt;<br><br>                        
-                        &lt;a href="url"&gt;<br>
-                            &lt;img src="logo.jpg"&gt;Click this image<br>
-                        &lt;/a&gt;
-                    </td>
-                    <td>The &lt;a&gt; anchor element is used to create hyperlinks in an HTML document. The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL via the hyperlink reference attribute, href. The href determines the location the anchor element points to.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;head&gt; Head Element
-                    </td>
-                    <td>&lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                            &lt;head&gt;<br>
-                            &lt;!-- Metadata is contained in this element--&gt;<br>
-                            &lt;/head&gt;<br>
-                        &lt;/html&gt;
-                    </td>
-                    <td>The &lt;head&gt; element contains general information about an HTML page that isn't displayed on the page itself. This information is called metadata and includes things like the title of the HTML document and links to stylesheets.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;target&gt; Target Attribute
-                    </td>
-                    <td>&lt;a href="url" target = "_blank"&gt;This anchor element links to google and will open in a new tab or window.&lt;/a&gt;
-                    </td>
-                    <td>The target attribute on an &lt;a&gt; anchor element specifies where a hyperlink should be opened. A target value of "_blank" will tell the browser to open the hyperlink in a new tab in modern browsers, or in a new window in older browsers or if the browser has had settings changed to open hyperlinks in a new window.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Link to a Different Part of the Page #
-                    </td>
-                    <td>&lt;div&gt;<br>
-                        &lt;p id="#id - of - element"&gt;A different part of the page!&lt;/p&gt;<br>
-                        &lt;/div&gt;<br><br>                        
-                        &lt;a href="#id - of - element"&gt;Take me to a different part of the page&lt;/a&gt;
-                    </td>
-                    <td>The anchor element &lt;a&gt; can create hyperlinks to different parts of the same HTML document using the href attribute to point to the desired location with # followed by the id of the element to link to.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;title&gt; Title Element
-                    </td>
-                    <td>&lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &lt;head&gt;<br>
-                        &lt;title&gt;Title of the HTML page&lt;/title&gt;<br>
-                        &lt;/head&gt;<br>
-                        &lt;/html&gt;
-                    </td>
-                    <td>The &lt;title&gt; element contains a text that defines the title of an HTML document. The title is displayed in the browser's title bar or tab in which the HTML page is displayed. The &lt;title&gt; element can only be contained inside a document's &lt;head&gt; element.
-                    </td>
-                </tr>
-                <tr>
-                    <td>File Path
-                    </td>
-                    <td>&lt;a href="url"&gt;The URL for this anchor element is an absolute file path.&lt;/a&gt;
-                        <br><br>
-                        &lt;a href=". /about. html "&gt;The URL for this anchor element is a relative file path.&lt;/a&gt;
-                    </td>
-                    <td>URL paths in HTML can be absolute paths, like a full URL, for example: https://url or a relative file path that links to a local file in the same folder or on the same server, for example: ./style.css. Relative file paths begin with ./ followed by a path to the local file. ./ tells the browser to look for the file path from the current folder.
-                    </td>
-                </tr> 
-            </tbody>
-        </table>                       
+            <div id="link2elements"></div>
+            <h2>Elements and Structure</h2>
 
-        <div id="link2tables"></div>
-        <h2 id="h2tables">Tables</h2>            
-        <br>
-
-        <table id="tabletable">
-            <thead>
-                <tr>
-                    <th>Element</th>
-                    <th>Example Code</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>                    
-                <tr>
-                    <td>&lt;tbody&gt; Table Body Element
-                    </td>
-                    <td>&lt;table&gt;<br>
-                        &lt;tbody&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;td&gt;row 1&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;td&gt;row 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;td&gt;row 3&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                        &lt;/tbody&gt;<br>
-                        &lt;/table&gt;                                  
-                    </td>                    
-                    <td>The table body element, &lt;tbody&gt;, is a semantic element that will contain all table data other than table heading and table footer content. If used, &lt;tbody&gt; will contain all table row &lt;tr&gt; elements, and indicates that &lt;tr&gt; elements make up the body of the table. &lt;table&gt; cannot have both &lt;tbody&gt; and &lt;tr&gt; as direct children.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;thead&gt; Table Head Element
-                    </td>            
-                    <td>&lt;table&gt;<br>
-                        &lt;thead&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;th&gt;heading 1&lt;/th&gt;<br>
-                            &lt;th&gt;heading 2&lt;/th&gt;<br>
-                            &lt;/tr&gt;<br>
-                        &lt;/thead&gt;<br>
-                        &lt;tbody&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;td&gt;col 1&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                        &lt;/tbody&gt;<br>
-                        &lt;/table&gt;                                          
-                    </td>
-                    <td>The table head element, &lt;thead&gt;, defines the headings of table columns encapsulated in table rows. The table heading element, &lt;th&gt;, is used to add titles to rows and columns of a table and must be enclosed in a table row element, &lt;tr&gt;.
-                    </td>
-                </tr>
-                <tr>
-                    <td>rowspan Attribute
-                    </td>
-                    <td>&lt;table&gt;<br>
-                        &lt;tr&gt;<br>
-                          &lt;th&gt;row 1:&lt;/th&gt;<br>
-                          &lt;td&gt;col 1&lt;/td&gt;<br>
-                          &lt;td&gt;col 2&lt;/td&gt;<br>
-                        &lt;/tr&gt;<br>
-                        &lt;tr&gt;<br>
-                          &lt;th rowspan="2"&gt;row 2 (this row will span 2 rows):&lt;/th&gt;<br>
-                          &lt;td&gt;col 1&lt;/td&gt;<br>
-                          &lt;td&gt;col 2&lt;/td&gt;<br>
-                        &lt;/tr&gt;<br>
-                        &lt;tr&gt;<br>
-                          &lt;td&gt;col 1&lt;/td&gt;<br>
-                          &lt;td&gt;col 2&lt;/td&gt;<br>
-                        &lt;/tr&gt;<br>
-                         &lt;tr&gt;<br>
-                          &lt;th&gt;row 3:&lt;/th&gt;<br>
-                          &lt;td&gt;col 1&lt;/td&gt;<br>
-                          &lt;td&gt;col 2&lt;/td&gt;<br>
-                        &lt;/tr&gt;<br>
-                      &lt;/table&gt;                                     
-                    </td>
-                    <td>Similar to colspan, the rowspan attribute on a table header or table data element indicates how many rows that particular cell should span within the table. The rowspan value is set to 1 by default and will take any positive integer up to 65534.
-                    </td>
-                </tr>
-                <tr>
-                    <td>colspan Attribute
-                    </td>
-                    <td>&lt;table&gt;<br>
-                        &lt;tr&gt;<br>
-                          &lt;th&gt;row 1:&lt;/th&gt;<br>
-                          &lt;td&gt;col 1&lt;/td&gt;<br>
-                          &lt;td&gt;col 2&lt;/td&gt;<br>
-                          &lt;td&gt;col 3&lt;/td&gt;<br>
-                        &lt;/tr&gt;<br>
-                        &lt;tr&gt;<br>
-                          &lt;th&gt;row 2:&lt;/th&gt;<br>
-                          &lt;td colspan="2"&gt;col 1 (will span 2 columns)&lt;/td&gt;<br>
-                          &lt;td&gt;col 2&lt;/td&gt;<br>
-                          &lt;td&gt;col 3&lt;/td&gt;<br>
-                        &lt;/tr&gt;<br>
-                      &lt;/table&gt;                                      
-                    </td>
-                    <td>The colspan attribute on a table header &lt;th&gt; or table data &lt;td&gt; element indicates how many columns that particular cell should span within the table. The colspan value is set to 1 by default and will take any positive integer between 1 and 1000.
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;tfoot&gt; Table Footer Element
-                    </td>
-                    <td>&lt;table&gt;<br>
-                        &lt;thead&gt;<br>
-                          &lt;tr&gt;<br>
-                            &lt;th&gt;heading 1&lt;/th&gt;<br>
-                            &lt;th&gt;heading 2&lt;/th&gt;<br>
-                          &lt;/tr&gt;<br>
-                        &lt;/thead&gt;<br>
-                        &lt;tbody&gt;<br>
-                          &lt;tr&gt;<br>
-                            &lt;td&gt;col 1&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                          &lt;/tr&gt;<br>
-                        &lt;/tbody&gt;<br>
-                        &lt;tfoot&gt;<br>
-                          &lt;tr&gt;<br>
-                            &lt;td&gt;summary of col 1&lt;/td&gt;<br>
-                            &lt;td&gt;summary of col 2&lt;/td&gt;<br>
-                          &lt;/tr&gt;<br>
-                        &lt;/tfoot&gt;<br>
-                       &lt;/table&gt;                                       
-                    </td>
-                    <td>The table footer element, &lt;tfoot&gt;, uses table rows to give footer content or to summarize content at the end of a table.
-                    </td>
-                </tr>                
-            </tbody>
-            
-        </table>
-
-        <footer>
             <br>
-            <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>
-        </footer>
-        
-        <script src="" async defer></script>
+                    
+            <table>
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Example Code</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;video&gt; Video Element
+                        </td>
+                        <td>&lt;video src="test-video.mp4" controls&gt;Video not supported
+                        &lt;/video&gt;
+                        </td>
+                        <td>The &lt;video&gt; element embeds a media player for video playback. The src attribute will contain the URL to the video. Adding the controls attribute will display video controls in the media player.
+                        <br><br>
+                        Note: The content inside the opening and closing tag is shown as a fallback in browsers that don't support the element.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;img&gt; Image Element
+                        </td>
+                        <td>&lt;img src="url" alt="text" /&gt;
+                        </td>
+                        <td>HTML image &lt;img&gt; elements embed images in documents. The src attribute contains the image URL and is mandatory. &lt;img&gt; is an empty element meaning it should not have a closing tag. The alternative text will be displayed if an image fails to render.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;body&gt; Body Element
+                        </td>
+                        <td></td>
+                        <td>The &lt;body&gt; element represents the content of an HTML document. Content inside &lt;body&gt; tags are rendered on the web browsers. Note: There can be only one &lt;body&gt; element in a document.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;a&gt; Anchor Element
+                        </td>
+                        <td>&lt;a href="url" title="click here!"&gt;Visit this site&lt;/a&gt;<br><br>                        
+                            &lt;a href="url"&gt;<br>
+                                &lt;img src="logo.jpg"&gt;Click this image<br>
+                            &lt;/a&gt;
+                        </td>
+                        <td>The &lt;a&gt; anchor element is used to create hyperlinks in an HTML document. The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL via href attribute. <br><br>
+                            
+                            The title attribute is used to display additional text when you hover over the link.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;head&gt; Head Element
+                        </td>
+                        <td>&lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                                &lt;head&gt;<br>
+                                &lt;!-- Metadata is contained in this element--&gt;<br>
+                                &lt;/head&gt;<br>
+                            &lt;/html&gt;
+                        </td>
+                        <td>The &lt;head&gt; element contains general information about an HTML page that isn't displayed on the page itself. This information is called metadata and includes things like the title of the HTML document and links to stylesheets.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;target&gt; Target Attribute
+                        </td>
+                        <td>&lt;a href="url" target = "_blank"&gt;This anchor element links to google and will open in a new tab or window.&lt;/a&gt;
+                        </td>
+                        <td>The target attribute on an &lt;a&gt; anchor element specifies where a hyperlink should be opened. A target value of "_blank" will tell the browser to open the hyperlink in a new tab in modern browsers, or in a new window in older browsers or if the browser has had settings changed to open hyperlinks in a new window.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Link to a Different Part of the Page #
+                        </td>
+                        <td>&lt;div&gt;<br>
+                            &lt;p id="#id - of - element"&gt;A different part of the page!&lt;/p&gt;<br>
+                            &lt;/div&gt;<br><br>                        
+                            &lt;a href="#id - of - element"&gt;Take me to a different part of the page&lt;/a&gt;
+                        </td>
+                        <td>The anchor element &lt;a&gt; can create hyperlinks to different parts of the same HTML document using the href attribute to point to the desired location with # followed by the id of the element to link to.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;title&gt; Title Element
+                        </td>
+                        <td>&lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &lt;head&gt;<br>
+                            &lt;title&gt;Title of the HTML page&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;/html&gt;
+                        </td>
+                        <td>The &lt;title&gt; element contains a text that defines the title of an HTML document. The title is displayed in the browser's title bar or tab in which the HTML page is displayed. The &lt;title&gt; element can only be contained inside a document's &lt;head&gt; element.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>File Path
+                        </td>
+                        <td>&lt;a href="url"&gt;The URL for this anchor element is an absolute file path.&lt;/a&gt;
+                            <br><br>
+                            &lt;a href=". /about. html "&gt;The URL for this anchor element is a relative file path.&lt;/a&gt;
+                        </td>
+                        <td>URL paths in HTML can be absolute paths, like a full URL, for example: https://url or a relative file path that links to a local file in the same folder or on the same server, for example: ./style.css. Relative file paths begin with ./ followed by a path to the local file. ./ tells the browser to look for the file path from the current folder.
+                        </td>
+                    </tr> 
+                </tbody>
+            </table>                       
+
+            <div id="link2tables"></div>
+            <h2 class="h2green">Tables</h2>            
+            <br>
+
+            <table class="green-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Example Code</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>                    
+                    <tr>
+                        <td>&lt;tbody&gt; Table Body Element
+                        </td>
+                        <td>&lt;table&gt;<br>
+                            &lt;tbody&gt;<br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;row 1&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;row 2&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;row 3&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                            &lt;/tbody&gt;<br>
+                            &lt;/table&gt;                                  
+                        </td>                    
+                        <td>The table body element, &lt;tbody&gt;, is a semantic element that will contain all table data other than table heading and table footer content. If used, &lt;tbody&gt; will contain all table row &lt;tr&gt; elements, and indicates that &lt;tr&gt; elements make up the body of the table. &lt;table&gt; cannot have both &lt;tbody&gt; and &lt;tr&gt; as direct children.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;thead&gt; Table Head Element
+                        </td>            
+                        <td>&lt;table&gt;<br>
+                            &lt;thead&gt;<br>
+                                &lt;tr&gt;<br>
+                                &lt;th&gt;heading 1&lt;/th&gt;<br>
+                                &lt;th&gt;heading 2&lt;/th&gt;<br>
+                                &lt;/tr&gt;<br>
+                            &lt;/thead&gt;<br>
+                            &lt;tbody&gt;<br>
+                                &lt;tr&gt;<br>
+                                &lt;td&gt;col 1&lt;/td&gt;<br>
+                                &lt;td&gt;col 2&lt;/td&gt;<br>
+                                &lt;/tr&gt;<br>
+                            &lt;/tbody&gt;<br>
+                            &lt;/table&gt;                                          
+                        </td>
+                        <td>The table head element, &lt;thead&gt;, defines the headings of table columns encapsulated in table rows. The table heading element, &lt;th&gt;, is used to add titles to rows and columns of a table and must be enclosed in a table row element, &lt;tr&gt;.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>rowspan Attribute
+                        </td>
+                        <td>&lt;table&gt;<br>
+                            &lt;tr&gt;<br>
+                            &lt;th&gt;row 1:&lt;/th&gt;<br>
+                            &lt;td&gt;col 1&lt;/td&gt;<br>
+                            &lt;td&gt;col 2&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                            &lt;tr&gt;<br>
+                            &lt;th rowspan="2"&gt;row 2 (this row will span 2 rows):&lt;/th&gt;<br>
+                            &lt;td&gt;col 1&lt;/td&gt;<br>
+                            &lt;td&gt;col 2&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                            &lt;tr&gt;<br>
+                            &lt;td&gt;col 1&lt;/td&gt;<br>
+                            &lt;td&gt;col 2&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                            &lt;tr&gt;<br>
+                            &lt;th&gt;row 3:&lt;/th&gt;<br>
+                            &lt;td&gt;col 1&lt;/td&gt;<br>
+                            &lt;td&gt;col 2&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                        &lt;/table&gt;                                     
+                        </td>
+                        <td>Similar to colspan, the rowspan attribute on a table header or table data element indicates how many rows that particular cell should span within the table. The rowspan value is set to 1 by default and will take any positive integer up to 65534.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>colspan Attribute
+                        </td>
+                        <td>&lt;table&gt;<br>
+                            &lt;tr&gt;<br>
+                            &lt;th&gt;row 1:&lt;/th&gt;<br>
+                            &lt;td&gt;col 1&lt;/td&gt;<br>
+                            &lt;td&gt;col 2&lt;/td&gt;<br>
+                            &lt;td&gt;col 3&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                            &lt;tr&gt;<br>
+                            &lt;th&gt;row 2:&lt;/th&gt;<br>
+                            &lt;td colspan="2"&gt;col 1 (will span 2 columns)&lt;/td&gt;<br>
+                            &lt;td&gt;col 2&lt;/td&gt;<br>
+                            &lt;td&gt;col 3&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                        &lt;/table&gt;                                      
+                        </td>
+                        <td>The colspan attribute on a table header &lt;th&gt; or table data &lt;td&gt; element indicates how many columns that particular cell should span within the table. The colspan value is set to 1 by default and will take any positive integer between 1 and 1000.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tfoot&gt; Table Footer Element
+                        </td>
+                        <td>&lt;table&gt;<br>
+                            &lt;thead&gt;<br>
+                            &lt;tr&gt;<br>
+                                &lt;th&gt;heading 1&lt;/th&gt;<br>
+                                &lt;th&gt;heading 2&lt;/th&gt;<br>
+                            &lt;/tr&gt;<br>
+                            &lt;/thead&gt;<br>
+                            &lt;tbody&gt;<br>
+                            &lt;tr&gt;<br>
+                                &lt;td&gt;col 1&lt;/td&gt;<br>
+                                &lt;td&gt;col 2&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                            &lt;/tbody&gt;<br>
+                            &lt;tfoot&gt;<br>
+                            &lt;tr&gt;<br>
+                                &lt;td&gt;summary of col 1&lt;/td&gt;<br>
+                                &lt;td&gt;summary of col 2&lt;/td&gt;<br>
+                            &lt;/tr&gt;<br>
+                            &lt;/tfoot&gt;<br>
+                        &lt;/table&gt;                                       
+                        </td>
+                        <td>The table footer element, &lt;tfoot&gt;, uses table rows to give footer content or to summarize content at the end of a table.
+                        </td>
+                    </tr>                
+                </tbody>
+                
+            </table>
+
+            <footer>
+                <br>
+                <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>
+            </footer>
+            
+            <script src="" async defer></script>
+        </main> 
     </body>
 </html>
