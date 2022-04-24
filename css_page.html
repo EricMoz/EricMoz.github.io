@@ -6,6 +6,7 @@
         <title>Moz Coding Cheatsheet</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -22,201 +23,295 @@
             </nav>
         </header>
 
-        <h1>CSS</h1>
-
         <div class="shortcutbox">
             <a href="#link2syntax">Syntax</a>
-            <a href="#link2visual">Visual Rules</a>  
-            <a href="">TBD</a>          
+            <a href="#link2visual">Visual Rules</a> 
+            <a href="#link2box">Box Model</a>  
+            <a href="#link2fund">Fundamentals</a>            
+            <a href="#link2nav">Navigation</a> 
         </div>
 
-        <div id="link2syntax"></div>
-        <h2 id="h2syntax">Syntax and Selectors</h2>
+        <main>
+            <h1>CSS</h1>
+            
+            <div id="link2syntax"></div>
+            <h2>Syntax and Selectors</h2>
 
-        <br>
-                
-        <table id="syntaxtable">
-            <thead>
-                <tr>
-                    <th>Syntax</th>
-                    <th>Example Code</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Write CSS in Separate Files
-                    </td>
-                    <td>&lt;head&gt; <br>
-                        &lt;link href="style.css" type="text/css" rel="stylesheet"&gt; <br>
-                      &lt;/head&gt; <br>                   
-                    </td>
-                    <td>CSS code can be written in its own files to keep it separate from the HTML code. The extension for CSS files is .css. These can be linked to an HTML file using a &lt;link&gt; tag in the &lt;head&gt; section.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Class and ID Selectors
-                    </td>
-                    <td>/* Selects all elements with class="column" */ <br>
-                        .column { <br>
+            <br>
+                    
+            <table>
+                <thead>
+                    <tr>
+                        <th>Syntax</th>
+                        <th>Example Code</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Write CSS in Separate Files
+                        </td>
+                        <td>&lt;head&gt; <br>
+                            &lt;link href="style.css" type="text/css" rel = "stylesheet"&gt; <br>
+                        &lt;/head&gt; <br>                   
+                        </td>
+                        <td>CSS code can be written in its own files to keep it separate from the HTML code. The extension for CSS files is .css. These can be linked to an HTML file using a &lt;link&gt; tag in the &lt;head&gt; section.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Class and ID Selectors
+                        </td>
+                        <td>/* Selects all elements with class="column" */ <br>
+                            .column { <br>
+                            } <br>
+                            <br>
+                            /* Selects element with id="first-item" */ <br>
+                            #first-item { <br>
+                            }                        
+                        </td>
+                        <td>CSS classes can be reusable and applied to many elements. Class selectors are denoted with a period . followed by the class name. CSS ID selectors should be unique and used to style only a single element. ID selectors are denoted with a hash sign # followed by the id name.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Groups of CSS Selectors  
+                        </td>
+                        <td>h1, h2 {<br>
+                            color: red;<br>
+                        }                      
+                        </td>
+                        <td>Match multiple selectors to the same CSS rule, using a comma - separated list. In this example, the text for both h1 and h2 is set to red.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Chaining Selectors
+                        </td>
+                        <td>/* Select h3 elements with the section-heading class */<br>
+                            h3.section-heading {<br>
+                            color: blue;<br>
+                            }<br>
+                            
+                            /* Select elements with the section-heading and button class */<br>
+                            .section-heading.button {<br>
+                            cursor: pointer;<br>
+                            }                        
+                        </td>
+                        <td>CSS selectors can be chained so that rule sets apply only to elements that match all criteria. For instance, to select &lt;h3&gt; elements that also have the section-heading class, the selector h3.section-heading can be used.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CSS class selectors
+                        </td>
+                        <td>.calendar-cell {<br>
+                            color: #fff;<br>
+                        }                      
+                        </td>
+                        <td>CSS class selectors
+                            The CSS class selector matches elements based on the contents of their class attribute. For selecting elements having calendar-cell as the value of the class attribute, a . needs to be prepended.                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CSS descendant selector
+                        </td>
+                        <td>div p { }<br>
+                            <br>
+                            section ol li { }                        
+                        </td>
+                        <td>CSS descendant selector
+                            The CSS descendant selector combinator is used to match elements that are descended from another matched selector. They are denoted by a single space between each selector and the descended selector. All matching elements are selected regardless of the nesting level in the HTML.                        
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+            
+
+            <div id="link2visual"></div>
+            <h2 class="h2green">Visual Rules</h2>            
+            <br>
+
+            <table class="green-table">
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Example Code</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSS declarations
+                        </td>
+                        <td>/* <br>
+                            CSS declaration format: <br>
+                            property-name: value; <br>
+                            */ <br>
+                            <br>
+                            /* CSS declarations */ <br>
+                            text-align: center; <br>
+                            color: purple; <br>
+                            width: 100px;                        
+                        </td>
+                        <td>In CSS, a declaration is the key-value pair of a CSS property and its value. CSS declarations are used to set style properties and construct rules to apply to individual or groups of elements. The property name and value are separated by a colon, and the entire declaration must be terminated by a semi-colon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>!important Rule 
+                        </td>                    
+                        <td>#column-one { <br>
+                            width: 200px !important; <br>
                         } <br>
                         <br>
-                        /* Selects element with id="first-item" */ <br>
-                        #first-item { <br>
-                        }                        
-                    </td>
-                    <td>CSS classes can be reusable and applied to many elements. Class selectors are denoted with a period . followed by the class name. CSS ID selectors should be unique and used to style only a single element. ID selectors are denoted with a hash sign # followed by the id name.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Groups of CSS Selectors  
-                    </td>
-                    <td>h1, h2 {<br>
-                        color: red;<br>
-                      }                      
-                    </td>
-                    <td>Match multiple selectors to the same CSS rule, using a comma-separated list. In this example, the text for both h1 and h2 is set to red.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Chaining Selectors
-                    </td>
-                    <td>/* Select h3 elements with the section-heading class */<br>
-                        h3.section-heading {<br>
-                          color: blue;<br>
-                        }<br>
-                         
-                        /* Select elements with the section-heading and button class */<br>
-                        .section-heading.button {<br>
-                          cursor: pointer;<br>
-                        }                        
-                    </td>
-                    <td>CSS selectors can be chained so that rule sets apply only to elements that match all criteria. For instance, to select &lt;h3&gt; elements that also have the section-heading class, the selector h3.section-heading can be used.
-                    </td>
-                </tr>
-                <tr>
-                    <td>CSS class selectors
-                    </td>
-                    <td>.calendar-cell {<br>
-                        color: #fff;<br>
-                      }                      
-                    </td>
-                    <td>CSS class selectors
-                        The CSS class selector matches elements based on the contents of their class attribute. For selecting elements having calendar-cell as the value of the class attribute, a . needs to be prepended.                        
-                    </td>
-                </tr>
-                <tr>
-                    <td>CSS descendant selector
-                    </td>
-                    <td>div p { }<br>
+                        .post-title { <br>
+                            color: blue !important; <br>
+                        }                      
+                        </td>
+                        <td>The CSS !important rule is used on declarations to override any other declarations for a property and ignore selector specificity. !important rules will ensure that a specific declaration always applies to the matched elements. However, generally it is good to avoid using !important as bad practice.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CSS Rule Sets
+                        </td>
+                        <td>h1 { <br>
+                            color: blue; <br>
+                            text-align: center; <br>
+                        }                      
+                        </td>
+                        <td>A CSS rule set contains one or more selectors and one or more declarations. The selector(s), which in this example is h1, points to an HTML element. The declaration(s), which in this example are color: blue and text-align: center style the element with a property and value. The rule set is the main building block of a CSS sheet.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Setting foreground text color in CSS
+                        </td>
+                        <td>p { <br>
+                            color : #2a2aff ; <br>
+                        } <br>
                         <br>
-                        section ol li { }                        
-                    </td>
-                    <td>CSS descendant selector
-                        The CSS descendant selector combinator is used to match elements that are descended from another matched selector. They are denoted by a single space between each selector and the descended selector. All matching elements are selected regardless of the nesting level in the HTML.                        
-                    </td>
-                </tr>
-            </tbody>
-        </table>                       
-
-        <div id="link2visual"></div>
-        <h2 id="h2visual">Visual Rules</h2>            
-        <br>
-
-        <table id="visualtable">
-            <thead>
-                <tr>
-                    <th>Rule</th>
-                    <th>Example Code</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>CSS declarations
-                    </td>
-                    <td>/* <br>
-                        CSS declaration format: <br>
-                        property-name: value; <br>
-                        */ <br>
+                        span { <br>
+                            color : green ; <br>
+                        }                      
+                        </td>
+                        <td>Using the color property, foreground text color of an element can be set in CSS. The value can be a valid color name supported in CSS like green or blue. Also, 3 digit or 6 digit color code like #22f or #2a2aff can be used to set the color.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Resource URLs
+                        </td>
+                        <td>background-image: url("url");
+                        </td>
+                        <td>In CSS, the url() function is used to wrap resource URLs. These can be applied to several properties such as the background-image.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Font Family
+                        </td>
+                        <td>h2 { <br>
+                            font-family: Verdana; <br>
+                        } <br>
                         <br>
-                        /* CSS declarations */ <br>
-                        text-align: center; <br>
-                        color: purple; <br>
-                        width: 100px;                        
-                    </td>
-                    <td>In CSS, a declaration is the key-value pair of a CSS property and its value. CSS declarations are used to set style properties and construct rules to apply to individual or groups of elements. The property name and value are separated by a colon, and the entire declaration must be terminated by a semi-colon.
-                    </td>
-                </tr>
-                <tr>
-                    <td>!important Rule 
-                    </td>                    
-                    <td>#column-one { <br>
-                        width: 200px !important; <br>
-                      } <br>
-                      <br>
-                      .post-title { <br>
-                        color: blue !important; <br>
-                      }                      
-                    </td>
-                    <td>The CSS !important rule is used on declarations to override any other declarations for a property and ignore selector specificity. !important rules will ensure that a specific declaration always applies to the matched elements. However, generally it is good to avoid using !important as bad practice.
-                    </td>
-                </tr>
-                <tr>
-                    <td>CSS Rule Sets
-                    </td>
-                    <td>h1 { <br>
-                        color: blue; <br>
-                        text-align: center; <br>
-                      }                      
-                    </td>
-                    <td>A CSS rule set contains one or more selectors and one or more declarations. The selector(s), which in this example is h1, points to an HTML element. The declaration(s), which in this example are color: blue and text-align: center style the element with a property and value. The rule set is the main building block of a CSS sheet.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Setting foreground text color in CSS
-                    </td>
-                    <td>p { <br>
-                        color : #2a2aff ; <br>
-                      } <br>
-                      <br>
-                      span { <br>
-                        color : green ; <br>
-                      }                      
-                    </td>
-                    <td>Using the color property, foreground text color of an element can be set in CSS. The value can be a valid color name supported in CSS like green or blue. Also, 3 digit or 6 digit color code like #22f or #2a2aff can be used to set the color.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Resource URLs
-                    </td>
-                    <td>background-image: url("url");
-                    </td>
-                    <td>In CSS, the url() function is used to wrap resource URLs. These can be applied to several properties such as the background-image.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Font Family
-                    </td>
-                    <td>h2 { <br>
-                        font-family: Verdana; <br>
-                      } <br>
-                      <br>
-                      #page-title { <br>
-                        font-family: "Courier New"; <br>
-                      }                      
-                    </td>
-                    <td>The font-family CSS property is used to specify the typeface in a rule set. Fonts must be available to the browser to display correctly, either on the computer or linked as a web font. If a font value is not available, browsers will display their default font. When using a multi-word font name, it is best practice to wrap them in quotes.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        #page-title { <br>
+                            font-family: "Courier New"; <br>
+                        }                      
+                        </td>
+                        <td>The font-family CSS property is used to specify the typeface in a rule set. Fonts must be available to the browser to display correctly, either on the computer or linked as a web font. If a font value is not available, browsers will display their default font. When using a multi-word font name, it is best practice to wrap them in quotes.
+                        </td>
+                    </tr>                
+                </tbody>
+            </table>
 
-        <footer>
+            <div id="link2box"></div>
+            <h2>The Box Model</h2>
+            <img src="resources/images/box-model.png" title="The Box Model" alt="The Box Model in CSS">
+
+            <div id="link2fund"></div>
+            <h2 class="h2green">Fundamentals</h2>            
             <br>
-            <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>
-        </footer>
-        
-        <script src="" async defer></script>
+
+            <table class="green-table">
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Example Code</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cascade and inheritance
+                        </td>
+                        <td>
+                            Read this <a href="https://developer.mozilla.org/en-US/docs/learn/css/building_blocks/cascade_and_inheritance" title="Click for an in-depth lesson" target="_blank">Lesson</a> for more information.
+                        </td>
+                        <td>The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Link States
+                        </td>
+                        <td> The proper order of these rules (LiV-HA!):<br><br>
+                            a:link<br>
+                            a:visited<br>
+                            a:hover<br>
+                            a:active                        
+                        </td>
+                        <td>The ordering of link state pseudo-class rules is important to reveal the proper information. When a user hovers and then clicks a link, those styles should always override the static styling surrounding a user's history with the link (unvisited :link and :visited).<em> The link/lesson above goes into this in more detail.</em>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>Affordances, Signifiers, and Clickability
+                        </td>
+                        <td> <a href="https://jnd.org/signifiers_not_affordances/" title="Click to read the article" target="_blank">Signifiers, Not Affordances</a><br><br>
+                            <a href="https://ui-patterns.com/" title="Click for more in-depth design patterns" target="_blank">UI Patterns</a>          
+                        </td>
+                        <td><em>Signifiers, Not Affordances</em> by Don Norman. This article discusses a bit of the history of thought around affordances and signifiers, and their importance in design. <br><br>
+                            <em>UI Patterns.com</em> has many examples of solutions to common design patterns in web design.
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>CSS Transitions
+                        </td>
+                        <td> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" title="Click to read the lesson" target="_blank">Transitions<a>                     
+                        </td>
+                        <td>The transition CSS property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay.<br><br>
+                            View <em>The Summit</em> project for reference. 
+                        </td>
+                    </tr>              
+                </tbody>
+            </table>
+
+            <div id="link2nav"></div>
+            <h2>Navigation</h2>
+
+            <br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Example Code</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+ Adjacent Sibling Combinator 
+                        </td>
+                        <td>The code below adds a “/“ symbol inbetween all adjacent breadcrumbs:<br><br>
+                            .breadcrumb li+li::before { <br>
+                            content: "/"; <br>
+                        }              
+                        </td>
+                        <td>it will only select two li's when they are immediately next to each other, with the same parent. The element that actually gets selected is the second element of this sibling pair.<br><br>
+                            The ::before part of this selector creates a pseudo-element. The ::before pseudo-element is often used with the content property, to add content that will be displayed just before the selected element.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <footer>
+                <br>
+                <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>
+            </footer>
+            
+            <script src="" async defer></script>
+        </main>
     </body>
 </html>
