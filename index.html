@@ -1,288 +1,146 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Moz Coding Cheatsheet</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <header>
-            <nav>
-                <ul>
-                    <a href="index.html"><li>HTML</li></a>
-                    <a href="css_page.html"><li>CSS</li></a>
-                    <a href=""><li>Projects</li></a>
-                </ul>
-            </nav>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources\reset.css">
+    <link rel="stylesheet" href="resources\fonts.css">
+    <link rel="stylesheet" href="resources\styles.css"> 
+    <title>CSS Style Guide</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="#color-palette-link"><li>Colors</li></a>
+                <a href="#fonts-link"><li>Fonts</li></a>
+                <a href="#text-style-link"><li>Text Styles</li></a>
+            </ul>
+        </nav>    
+    </header>    
 
-        <div class="shortcutbox">
-            <a href="#link2elements">Elements</a>
-            <a href="#link2tables">Tables</a>  
-            <a href="">TBD</a>          
+    <main>
+        <h1>My Website Style Guide</h1>        
+
+        <div id="color-palette-link"></div><br>
+        <div class="container">
+            <h2>Color Palette</h2>
+            <div class="color-container">
+                <div class="A59185">
+                    <p>Grullo<br>
+                    #A59185</p>
+                </div>
+                <div class="B69F93">
+                    <p>Tuscany<br>
+                    #B69F93</p>
+                </div>
+                <div class="CFC1B8">
+                    <p>Dark Vanilla<br>
+                    #CFC1B8</p>
+                </div>
+                <div class="F5EAE2">
+                    <p>Alabaster<br>
+                    #F5EAE2</p>
+                </div>
+                <div class="CDC7BD">
+                    <p>Pale Silver<br>
+                    #CDC7BD</p>
+                </div>
+                <div class="B5B5AD">
+                    <p>Silver Chalice<br>
+                    #B5B5AD</p>
+                </div>
+                <div class="A3A398">
+                    <p>Quick Silver<br>
+                    #A3A398</p>
+                </div>
+                <div class="c-6B6D64">
+                    <p>Dim Gray<br>
+                    #6B6D64</p>
+                </div>
+                <div class="c-3F403C">
+                    <p>Black Olive<br>
+                    #3F403C</p>
+                </div>
+            </div>
         </div>
 
-        <main>           
-            <h1>HTML</h1>
+        <div id="fonts-link"></div><br>
+        <div class="container-alabaster">
+            <h2>Fonts</h2>
+            <div class="font-container">
+                <div class="lato">
+                    <h3>Lato</h3>
+                    <p class="lato-1">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="lato-2">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="lato-3">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="lato-4">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="lato-5">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="roboto">
+                    <h3>Roboto</h3>
+                    <p class="roboto-1">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="roboto-2">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="roboto-3">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="roboto-4">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="roboto-5">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="playfair">
+                    <h3>Playfair Display</h3>
+                    <p class="playfair-1">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="playfair-2">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="playfair-3">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="playfair-4">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="spacemono">
+                    <h3>Space Mono</h3>
+                    <p class="spacemono-1">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="spacemono-2">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="spacemono-3">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+            </div> 
+        </div>
 
-            <div id="link2elements"></div>
-            <h2>Elements and Structure</h2>
+        <div id="text-style-link"></div><br>
+        <div class="container">
+            <h2>Text Styles</h2>
+            <div class="textstyle-container">
+                <div class="text-h1">
+                    <h3>H1: Main page heading</h3>
+                    <ul>
+                        <li>Font-family: Lato</li>
+                        <li>Font-size: 48px</li>
+                        <li>Font-weight: 700 (bold)</li>
+                        <li>Color: #3F403C (Black Olive)</li>
+                    </ul>
+                </div>
+                <div class="text-h2">
+                    <h3>H2: Subheading</h3>
+                    <ul>
+                        <li>Font-family: Lato</li>
+                        <li>Font-size: 34px</li>
+                        <li>Font-weight: 700 (bold)</li>
+                        <li>Color: #3F403C (Black Olive)</li>
+                    </ul>
+                </div>
+                <div class="text-p">
+                    <h3>P: Paragraph text</h3>
+                    <ul>
+                        <li>Font-family: Roboto</li>
+                        <li>Font-size: 20px</li>
+                        <li>Font-weight: 400 (normal)</li>
+                        <li>Color: #3F403C (Black Olive)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+    </main>
 
-            <br>
-                    
-            <table>
-                <thead>
-                    <tr>
-                        <th>Element</th>
-                        <th>Example Code</th>
-                        <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt;video&gt; Video Element
-                        </td>
-                        <td>&lt;video src="test-video.mp4" controls&gt;Video not supported
-                        &lt;/video&gt;
-                        </td>
-                        <td>The &lt;video&gt; element embeds a media player for video playback. The src attribute will contain the URL to the video. Adding the controls attribute will display video controls in the media player.
-                        <br><br>
-                        Note: The content inside the opening and closing tag is shown as a fallback in browsers that don't support the element.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;img&gt; Image Element
-                        </td>
-                        <td>&lt;img src="url" alt="text" /&gt;
-                        </td>
-                        <td>HTML image &lt;img&gt; elements embed images in documents. The src attribute contains the image URL and is mandatory. &lt;img&gt; is an empty element meaning it should not have a closing tag. The alternative text will be displayed if an image fails to render.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;body&gt; Body Element
-                        </td>
-                        <td></td>
-                        <td>The &lt;body&gt; element represents the content of an HTML document. Content inside &lt;body&gt; tags are rendered on the web browsers. Note: There can be only one &lt;body&gt; element in a document.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;a&gt; Anchor Element
-                        </td>
-                        <td>&lt;a href="url" title="click here!"&gt;Visit this site&lt;/a&gt;<br><br>                        
-                            &lt;a href="url"&gt;<br>
-                                &lt;img src="logo.jpg"&gt;Click this image<br>
-                            &lt;/a&gt;
-                        </td>
-                        <td>The &lt;a&gt; anchor element is used to create hyperlinks in an HTML document. The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL via href attribute. <br><br>
-                            
-                            The title attribute is used to display additional text when you hover over the link.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;head&gt; Head Element
-                        </td>
-                        <td>&lt;!DOCTYPE html&gt;<br>
-                            &lt;html&gt;<br>
-                                &lt;head&gt;<br>
-                                &lt;!-- Metadata is contained in this element--&gt;<br>
-                                &lt;/head&gt;<br>
-                            &lt;/html&gt;
-                        </td>
-                        <td>The &lt;head&gt; element contains general information about an HTML page that isn't displayed on the page itself. This information is called metadata and includes things like the title of the HTML document and links to stylesheets.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;target&gt; Target Attribute
-                        </td>
-                        <td>&lt;a href="url" target = "_blank"&gt;This anchor element links to google and will open in a new tab or window.&lt;/a&gt;
-                        </td>
-                        <td>The target attribute on an &lt;a&gt; anchor element specifies where a hyperlink should be opened. A target value of "_blank" will tell the browser to open the hyperlink in a new tab in modern browsers, or in a new window in older browsers or if the browser has had settings changed to open hyperlinks in a new window.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Link to a Different Part of the Page #
-                        </td>
-                        <td>&lt;div&gt;<br>
-                            &lt;p id="#id - of - element"&gt;A different part of the page!&lt;/p&gt;<br>
-                            &lt;/div&gt;<br><br>                        
-                            &lt;a href="#id - of - element"&gt;Take me to a different part of the page&lt;/a&gt;
-                        </td>
-                        <td>The anchor element &lt;a&gt; can create hyperlinks to different parts of the same HTML document using the href attribute to point to the desired location with # followed by the id of the element to link to.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;title&gt; Title Element
-                        </td>
-                        <td>&lt;!DOCTYPE html&gt;<br>
-                            &lt;html&gt;<br>
-                            &lt;head&gt;<br>
-                            &lt;title&gt;Title of the HTML page&lt;/title&gt;<br>
-                            &lt;/head&gt;<br>
-                            &lt;/html&gt;
-                        </td>
-                        <td>The &lt;title&gt; element contains a text that defines the title of an HTML document. The title is displayed in the browser's title bar or tab in which the HTML page is displayed. The &lt;title&gt; element can only be contained inside a document's &lt;head&gt; element.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>File Path
-                        </td>
-                        <td>&lt;a href="url"&gt;The URL for this anchor element is an absolute file path.&lt;/a&gt;
-                            <br><br>
-                            &lt;a href=". /about. html "&gt;The URL for this anchor element is a relative file path.&lt;/a&gt;
-                        </td>
-                        <td>URL paths in HTML can be absolute paths, like a full URL, for example: https://url or a relative file path that links to a local file in the same folder or on the same server, for example: ./style.css. Relative file paths begin with ./ followed by a path to the local file. ./ tells the browser to look for the file path from the current folder.
-                        </td>
-                    </tr> 
-                </tbody>
-            </table>                       
-
-            <div id="link2tables"></div>
-            <h2 class="h2green">Tables</h2>            
-            <br>
-
-            <table class="green-table">
-                <thead>
-                    <tr>
-                        <th>Element</th>
-                        <th>Example Code</th>
-                        <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>                    
-                    <tr>
-                        <td>&lt;tbody&gt; Table Body Element
-                        </td>
-                        <td>&lt;table&gt;<br>
-                            &lt;tbody&gt;<br>
-                                &lt;tr&gt;<br>
-                                &lt;td&gt;row 1&lt;/td&gt;<br>
-                                &lt;/tr&gt;<br>
-                                &lt;tr&gt;<br>
-                                &lt;td&gt;row 2&lt;/td&gt;<br>
-                                &lt;/tr&gt;<br>
-                                &lt;tr&gt;<br>
-                                &lt;td&gt;row 3&lt;/td&gt;<br>
-                                &lt;/tr&gt;<br>
-                            &lt;/tbody&gt;<br>
-                            &lt;/table&gt;                                  
-                        </td>                    
-                        <td>The table body element, &lt;tbody&gt;, is a semantic element that will contain all table data other than table heading and table footer content. If used, &lt;tbody&gt; will contain all table row &lt;tr&gt; elements, and indicates that &lt;tr&gt; elements make up the body of the table. &lt;table&gt; cannot have both &lt;tbody&gt; and &lt;tr&gt; as direct children.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;thead&gt; Table Head Element
-                        </td>            
-                        <td>&lt;table&gt;<br>
-                            &lt;thead&gt;<br>
-                                &lt;tr&gt;<br>
-                                &lt;th&gt;heading 1&lt;/th&gt;<br>
-                                &lt;th&gt;heading 2&lt;/th&gt;<br>
-                                &lt;/tr&gt;<br>
-                            &lt;/thead&gt;<br>
-                            &lt;tbody&gt;<br>
-                                &lt;tr&gt;<br>
-                                &lt;td&gt;col 1&lt;/td&gt;<br>
-                                &lt;td&gt;col 2&lt;/td&gt;<br>
-                                &lt;/tr&gt;<br>
-                            &lt;/tbody&gt;<br>
-                            &lt;/table&gt;                                          
-                        </td>
-                        <td>The table head element, &lt;thead&gt;, defines the headings of table columns encapsulated in table rows. The table heading element, &lt;th&gt;, is used to add titles to rows and columns of a table and must be enclosed in a table row element, &lt;tr&gt;.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>rowspan Attribute
-                        </td>
-                        <td>&lt;table&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;th&gt;row 1:&lt;/th&gt;<br>
-                            &lt;td&gt;col 1&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;th rowspan="2"&gt;row 2 (this row will span 2 rows):&lt;/th&gt;<br>
-                            &lt;td&gt;col 1&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;td&gt;col 1&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;th&gt;row 3:&lt;/th&gt;<br>
-                            &lt;td&gt;col 1&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                        &lt;/table&gt;                                     
-                        </td>
-                        <td>Similar to colspan, the rowspan attribute on a table header or table data element indicates how many rows that particular cell should span within the table. The rowspan value is set to 1 by default and will take any positive integer up to 65534.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>colspan Attribute
-                        </td>
-                        <td>&lt;table&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;th&gt;row 1:&lt;/th&gt;<br>
-                            &lt;td&gt;col 1&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;td&gt;col 3&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;tr&gt;<br>
-                            &lt;th&gt;row 2:&lt;/th&gt;<br>
-                            &lt;td colspan="2"&gt;col 1 (will span 2 columns)&lt;/td&gt;<br>
-                            &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;td&gt;col 3&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                        &lt;/table&gt;                                      
-                        </td>
-                        <td>The colspan attribute on a table header &lt;th&gt; or table data &lt;td&gt; element indicates how many columns that particular cell should span within the table. The colspan value is set to 1 by default and will take any positive integer between 1 and 1000.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&lt;tfoot&gt; Table Footer Element
-                        </td>
-                        <td>&lt;table&gt;<br>
-                            &lt;thead&gt;<br>
-                            &lt;tr&gt;<br>
-                                &lt;th&gt;heading 1&lt;/th&gt;<br>
-                                &lt;th&gt;heading 2&lt;/th&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;/thead&gt;<br>
-                            &lt;tbody&gt;<br>
-                            &lt;tr&gt;<br>
-                                &lt;td&gt;col 1&lt;/td&gt;<br>
-                                &lt;td&gt;col 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;/tbody&gt;<br>
-                            &lt;tfoot&gt;<br>
-                            &lt;tr&gt;<br>
-                                &lt;td&gt;summary of col 1&lt;/td&gt;<br>
-                                &lt;td&gt;summary of col 2&lt;/td&gt;<br>
-                            &lt;/tr&gt;<br>
-                            &lt;/tfoot&gt;<br>
-                        &lt;/table&gt;                                       
-                        </td>
-                        <td>The table footer element, &lt;tfoot&gt;, uses table rows to give footer content or to summarize content at the end of a table.
-                        </td>
-                    </tr>                
-                </tbody>
-                
-            </table>
-
-            <footer>
-                <br>
-                <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>
-            </footer>
-            
-            <script src="" async defer></script>
-        </main> 
-    </body>
+    <footer>  
+        <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>      
+    </footer>
+    
+</body>
 </html>
