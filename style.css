@@ -122,7 +122,7 @@ body {
 }
 
 main {
-    background-color: #fdfdfd;      
+    background-color: #fdfdfd;    
 }
 
 header {
@@ -140,9 +140,8 @@ nav {
     top: 0;    
     border-bottom: solid 3px #277DA1; 
     align-items: center;  
-    padding-left: 17px;    
+     
 }
-
 
 nav li {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -150,23 +149,24 @@ nav li {
     display: inline-block;    
     font-weight: 600;
     font-size: 22px;
-    font-weight: 700;
-    margin: auto; 
+    font-weight: 700;    
     color: #277DA1;  
     align-items: center;     
 } 
 
 nav li:hover {
+    padding: 15px 38px 15px 42px; 
     cursor: pointer;
     background-color: #277ca138;
-    transition: background-color .25s ease-in;    
+    color: #568BA1; 
+    transition: background-color .25s ease-in, padding .2s ease-in, color .25s ease-in;    
 } 
 
 .shortcutbox {
     position: fixed;
     background-color: #bed9e460;    
     width: 130px;      
-    left: 7px;
+    left: 6px;
     line-height: 30px;
     top: 87px;
     border: 3px solid #00000099;
@@ -185,11 +185,10 @@ nav li:hover {
 }
 
 .shortcutbox a:hover {
-    padding-top: 4px;
-    margin-bottom: -2px;    
+    padding: 4px 4px 0;
     background-color: #4f87a099;      
     color: #fdfdfd; 
-    transition: color .2s ease-in, background-color .2s ease-in, margin-bottom .2s ease-in, padding-top .2s ease-in;
+    transition: color .25s ease-in, background-color .25s ease-in, padding .25s ease-in;
 }
 
 .shortcutbox a:active {
@@ -202,7 +201,7 @@ h1 {
     text-align: center;
     font-size: 42px;
     margin-top: 100px;
-    color: #F9844A;
+    color: #f86e29;
     font-weight: 600;
     letter-spacing: .15em;
 }
@@ -216,14 +215,37 @@ h2 {
     text-decoration: underline;     
 }
 
+h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 35px 0 5px;
+    color: #277DA1;
+    text-decoration: none;     
+}
+
+p,
+hr {
+    margin: 10px 25%; 
+    text-align: justify;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    font-size: 16px;
+}
 
 img {
     display: block;
     margin: 10px auto;
     padding: 0;
-    width: 60%;
-    max-height: 75%;  
+    max-width: 45%;    
     border: 2px solid black;
+}
+
+.iframe-container {
+    text-align: center;
 }
 
 td a {
@@ -261,7 +283,7 @@ table tbody tr td:nth-child(1) {
     width: 18.75%;    
     background-color: #277ca188; 
     font-size: 17px;  
-    text-align: center;
+    text-align: left;
 }
 
 table tbody tr td:nth-child(2) {
@@ -277,7 +299,7 @@ table tbody tr td:nth-child(3) {
     word-wrap: break-word;
     width: 50%;    
     background-color: #277ca160; 
-    font-size: 17px;
+    font-size: 15px;
      
 }
 
@@ -302,16 +324,17 @@ table tbody tr td:nth-child(3) {
 }
 
 footer {
-    height: 74px;
+    height: 64px;
     width: 100%;    
     margin-top: 7%;
-    background-color: #fdfdfd;
-    border-top: solid 3px #277DA1
+    background-color: #d1e9f3;
+    border-top: solid 3px #277DA1;
+    padding: 10px 0 30px;
 }
 
 footer p{
-    padding-right: 2%;
-    margin-top: 10px;
+    padding-right: 2%;    
+    margin: 10px 0 0 0;
     text-align: right;
     font-size: 12px;  
     color: #1e5c77;
