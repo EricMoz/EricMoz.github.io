@@ -6,8 +6,8 @@
         <title>Moz Coding Cheatsheet</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="resources\reset.css">
+        <link rel="stylesheet" href="resources\style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -18,7 +18,7 @@
                 <ul>
                     <a href="index.html"><li>HTML</li></a>
                     <a href="css_page.html"><li>CSS</li></a>
-                    <a href=""><li>Projects</li></a>
+                    <a href="flexbox.html"><li>Flexbox</li></a>
                 </ul>
             </nav>
         </header>
@@ -28,7 +28,8 @@
             <a href="#link2visual">Visual Rules</a> 
             <a href="#link2box">Box Model</a>  
             <a href="#link2fund">Fundamentals</a>            
-            <a href="#link2nav">Navigation</a> 
+            <a href="#link2nav">Navigation</a>
+            <a href="#link2wire">Wireframes</a> 
         </div>
 
         <main>
@@ -219,7 +220,7 @@
 
             <div id="link2box"></div>
             <h2>The Box Model</h2>
-            <img src="box-model.png" title="The Box Model" alt="The Box Model in CSS">
+            <img src="resources/images/box-model.png" title="The Box Model" alt="The Box Model in CSS">
 
             <div id="link2fund"></div>
             <h2 class="h2green">Fundamentals</h2>            
@@ -234,6 +235,26 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>Face-Fonts
+                        </td>
+                        <td>@font-face {<br>
+                            font-family: 'MyOwnFont';<br>
+                            src: url('fonts/ Roboto.woff2') format('woff2'),<br>
+                                 url('fonts/ Roboto.woff') format('woff'),<br>
+                                 url('fonts/ Roboto.ttf') format('truetype') ; <br><br><br>
+                            <a href=https://google-webfonts-helper.herokuapp.com/fonts" target="_blank">Google Web Fonts</a>
+                            <br>
+                            <a href=https://css-tricks.com/snippets/css/using-font-face-in-css/" title="Click for more information" target="_blank">Additional resources</a> 
+                            <br><br>
+                            It's a good idea to include TTF, WOFF, and WOFF2 formats with your @font-face rule to ensure compatibility on all browsers.                            
+                        </td>
+                        <td>One of the most common ways of importing font styles in your webpage is using using @font-face in CSS:<br><br>                            
+                            Find the font you want and copy the code given below. You can rename it to anything you want in the font-family declaration. It uses the link source to get the font from google.
+                            <br><br>
+                            Place the code at the top of your CSS (the order matters). Once the @font-face at-rule is defined, you can use the font-family type in your stylesheet!
+                        </td>
+                    </tr>
                     <tr>
                         <td>Cascade and inheritance
                         </td>
@@ -252,7 +273,7 @@
                             a:hover<br>
                             a:active                        
                         </td>
-                        <td>The ordering of link state pseudo-class rules is important to reveal the proper information. When a user hovers and then clicks a link, those styles should always override the static styling surrounding a user's history with the link (unvisited :link and :visited).<em> The link/lesson above goes into this in more detail.</em>
+                        <td>The ordering of link state pseudo-class rules is important to reveal the proper information. When a user hovers and then clicks a link, those styles should always override the static styling surrounding a user's history with the link (unvisited :link and :visited).
                         </td>
                     </tr>  
                     <tr>
@@ -268,7 +289,7 @@
                     <tr>
                         <td>CSS Transitions
                         </td>
-                        <td> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" title="Click to read the lesson" target="_blank">Transitions<a>                     
+                        <td> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" title="Click to read the lesson" target="_blank">Transitions</a>                     
                         </td>
                         <td>The transition CSS property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay.<br><br>
                             View <em>The Summit</em> project for reference. 
@@ -299,15 +320,58 @@
                             content: "/"; <br>
                         }              
                         </td>
-                        <td>it will only select two li's when they are immediately next to each other, with the same parent. The element that actually gets selected is the second element of this sibling pair.<br><br>
-                            The ::before part of this selector creates a pseudo-element. The ::before pseudo-element is often used with the content property, to add content that will be displayed just before the selected element.
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator" title="Click to read the lesson" target="_blank">Adjacent Sibling Combinator</a><br>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Transitions
+                        </td>
+                        <td>Code below apples to all changed properties. You can also list out speicifc propterties by using a comma:<br><br>
+                            transition: all 0.5s ease-out;<br><br>
+                            transition: margin-right 4s, color 1s;
+                        </td>
+                        <td>Transitions enable you to define the transition between two states of an element. Different states may be defined using pseudo-classes like :hover or :active<br><br>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" title="Click to read the lesson" target="_blank">Transitions</a><br>   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Triangles
+                        </td>
+                        <td>Creating <a href="https://css-tricks.com/snippets/css/css-triangle/" title="Click to read the lesson" target="_blank">triangles</a> 
+                            in CSS.             
+                        </td>
+                        <td><em>Borders meet each other at angles</em>. The idea is a box with zero width and height. The actual width and height of the arrow is determined by the width of the border. In an up arrow, for example, the bottom border is colored while the left and right are transparent, which forms the triangle.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Breadcrumb Types
+                        </td>
+                        <td>Use breadcrumbs to indicate where a user is and the extent of the site. There are three major types of breadcrumbs:<br><br>
+                            - Location<br>
+                            - Attribute<br>
+                            - Path
+                        </td>
+                        <td>- <strong>Location</strong> based breadcrumbs are based on where you are with respect to the navigation structure of the website<br><br>
+                            - <strong>Attribute</strong> based breadcrumbs are based on the attributes of the page or product that you are browsing<br><br>
+                            - Breadcrumbs can be based on a user's unique <strong>Path</strong> through the site. For example, if they landed on the home page, browsed to the about page and finally the registration page
+                            
                         </td>
                     </tr>
                 </tbody>
             </table>
 
+            <div id="link2wire"></div>
+            <h2 class="h2green">Wireframes</h2>
+            <img src="resources/images/wireframe-bullets.jpg" title="What are Wireframes?" alt="Bullet-points describing what wireframes are"> <br>
+            <img src="resources/images/wireframe-example.png" title="Wireframes example for a weather app" alt="Wireframes example"> <br>
+
+            <hr>
+            <p>In this article, you will learn about wireframes and prototypes: what they are, why they're useful and how they're involved with the user experience design process. This is helpful if you'd like to understand the design process before development and how multiple iterations of a design must be critiqued and revised in order to present the ideal product to the user. <br><br>
+            <a href="https://xd.adobe.com/ideas/process/wireframing/wireframe-design-definition/" title="Click to read the article" target="_blank">Everything You Need to Know about Wireframes and Prototypes</a>
+            </p>
+            <hr>
+
             <footer>
-                <br>
                 <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>
             </footer>
             
