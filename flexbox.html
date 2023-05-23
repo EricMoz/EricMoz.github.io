@@ -1,1 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Moz Coding Cheatsheet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="resources\reset.css">
+        <link rel="stylesheet" href="resources\style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <nav>
+                <ul>
+                    <a href="index.html"><li>HTML</li></a>
+                    <a href="css_page.html"><li>CSS</li></a>
+                    <a href="flexbox.html"><li>Flexbox</li></a>
+                </ul>
+            </nav>
+        </header>
 
+        <div class="shortcutbox">
+            <a href="#anatomy">Grid Anatomy</a>
+            <a href="#responsive">Response Grid</a>
+            <a href="#properties">Flex Properties</a>
+            
+        </div>
+
+        <main>
+            <h1>Flexbox (CSS)</h1>
+
+            <div id="anatomy"></div>
+            <h2>Grid Anatomy</h2>
+            <a href="resources/images/grid-anatomy.png" title="Anatomy of a grid design on a webpage" target="_blank">
+            <img src="resources/images/grid-anatomy.png" title="Click to enlarge" alt="visual exmaple of a grid layout on a webpage"></a> <br>            
+
+            <hr>
+            <p>When designing a website, the grid comprises three major components: columns, gutters, and margins.</p>
+
+            <p><strong>Columns</strong>: are defined as the vertical sections that span the width of a page. In web design, it's common to see layouts consisting of 12 or 16 columns, while other may only feature three columns. Defining the number of columns depends on what's appropriate for your design, device, and or screen viewing size.</p>
+                
+            <p>Next, a <strong>gutter</strong> is the negative space between each column. Gutters help in ensuring the columns don't run together, which would negate the purpose of using a column-based grid. Gutters make up the negative space between columns. This design element helps to provide a natural break between elements aligned horizontally, while also helping to break rows of content vertically.</p>
+                
+            <p><strong>Margins</strong> appear on the left and right sides of the column-based grid. These ensure the content of your designs doesn't match up to the edges of the browser window.</p>
+                
+            <p><strong>Grid Rows</strong>: are the horizontal lines on a grid. Think of rows as invisible boxes that groups content together by height. Rows are commonly used in web designs to group content together and re-order other content to allow for more whitespace.</p>
+            <hr>
+
+
+            <div id="responsive"></div>
+            <h2 class="h2green">Responsive Grid</h2>
+            <hr>
+            <p>When designing web content, a designer needs to take into account the different screen-sizes a user might encounter and how that will affect a website's layout. Many websites utilize responsive design, a set of techniques that allow a website's content to shift based on the device or screen size. Because of these changes, responsive design requires a different number of total columns based on screen size, in order to accommodate content and keep it from being squished.</p>
+
+            <p>Consider your mobile, tablet and desktop devices. Now think about their viewable areas. All are substantially different in size. Thus, it's common practice in web design to create responsive grid sizes. On a large or desktop device you may start with a 12 column grid, but on a small or mobile device, you adjust the 12 column grid to a 4 column grid.</p>
+                
+            <p>As a designer, responsive grid design enables you to maximize the content on the screen, ensuring a more accessible experience for users. Additionally, your design elements will have sufficient space to breathe and content can naturally flow across the page.</p>
+            <hr>
+            
+            <div id="properties"></div>
+            <h2>Flexbox Container Properties</h2>
+
+            <br>
+                    
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Example Code</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>display: flex
+                        </td>
+                        <td>For an element to become a flex container, its display property must be set to flex.<br><br>
+
+                            div.container { <br>
+                              display: flex;
+                            }                
+                        </td>
+                        <td>Any element can be a flex container. Flex containers are helpful tools for creating websites that respond to changes in screen sizes. Child elements of flex containers will change size and location in response to the size and position of their parent container.
+                        </td>
+                    </tr>    
+                    <tr>
+                        <td>display: inline-flex
+                        </td>
+                        <td>Multiple flex containers to display inline with each other:<br><br>
+
+                            div.container { <br>
+                              display: inline-flex;
+                            }                
+                        </td>
+                        <td>If we didn't want div elements to be block-level elements, we would use display: inline. Flexbox, however, provides the inline-flex value for the display property, which allows us to create flex containers that are also inline elements.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>justify-content
+                        </td>
+                        <td>.container {<br><br>
+                            display: flex;<br>
+                            justify-content: flex-end;<br>
+                          } 
+                          <hr>
+                          <strong>HTML:</strong><br>
+                          &lt;div class='container' id='flexstart'&gt;<br><br>
+                          &lt;div class='box'&gt;&lt;/div&gt;<br>
+                          &lt;div class='box'&gt;&lt;/div&gt;<br>
+                          &lt;div class='box'&gt;&lt;/div&gt;<br><br>
+                          &lt;/div&gt;      
+                        </td>
+                        <td> By default, all of the child elements (flex items) moved toward the upper left corner of the parent container. To specify how flex items spread out from left to right along the main axis, we most commonly use 5 main properties below. <a href="resources/images/justify-content.png" title="Click to see an illustrative example" target="_blank">Visual Example</a><br><br>
+
+                            - <strong>flex-start</strong>: starting from the left of the parent container, with no extra space between or before.<br><br>
+                            
+                            - <strong>flex-end</strong>: the last item starting on the right side of the parent container, with no extra space between or after.<br><br>
+                            
+                            - <strong>center</strong>: centered in the parent container with no extra space before, between, or after.<br><br>
+                            
+                            - <strong>space-around</strong>: equal space before and after each item, resulting in double the space between elements.<br><br>
+                            
+                            - <strong>space-between</strong>: equal space between, but no extra space before the first or after the last elements.                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>align-items
+                        </td>
+                        <td>.container {<br>
+                            align-items: baseline;<br>
+                          }
+                          <br><br><br>
+                            <em><strong>Note</strong>: using min/max height/width will ensure element is at least/most a certain size.</em>
+                        </td>
+                        <td>Used to align space flex items vertically along the cross axis of the parent container. Below are five commonly used values for the align-items property: <a href="resources/images/align-items.png" title="Click to see an illustrative example" target="_blank">Visual Example</a><br><br>
+
+                            - <strong>flex-start</strong>: all elements will be positioned at the top of the parent container.<br><br>
+                            
+                            - <strong>flex-end</strong>: all elements will be positioned at the bottom of the parent container.<br><br>
+                            
+                            - <strong>center</strong>: the center of all elements will be positioned halfway between the top and bottom of the parent container.<br><br>
+                            
+                            - <strong>baseline</strong>: the bottom of the content of all items will be aligned with each other.<br><br>
+                            
+                            - <strong>stretch</strong>: if possible, the items will stretch from top to bottom of the container (<u>this is the default value</u>; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>flex-grow
+                        </td>
+                        <td>.container {<br>
+                            display: flex;<br>
+                          }<br><br>
+                           
+                          .side {<br>
+                            width: 100px;<br>
+                            flex-grow: 1;<br>
+                          }<br><br>
+                           
+                          .center {<br>
+                            width: 100px;<br>
+                            flex-grow: 2;<br>
+                          }
+                        </td>
+                        <td>If the parent container is larger than necessary, then the flex items will not stretch by default. The flex-grow property allows us to specify if items should grow to fill a container and also which items should grow proportionally more or less than others. <br><br>
+                        This property is declared directly on the flex items and not the container itself (in ratio/proportion form). Flex items do not grow unless the flex-grow property is declared because the default value is 0. <a href="resources/images/flex-grow.png" title="Click to see an illustrative example" target="_blank">Visual Example</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>flex-shrink
+                        </td>
+                        <td>In exmaple below, the .center div will shrink twice as much as the .side divs if the .container div is too small to fit the elements within it:<br><br>
+                            .container {<br>
+                            display: flex;<br>
+                          }<br><br>
+                           
+                          .side {<br>
+                            width: 100px;<br>
+                            flex-shrink: 1;<br>
+                          }<br><br>
+                           
+                          .center {<br>
+                            width: 100px;<br>
+                            flex-shrink: 2;<br>
+                          }
+                        </td>
+                        <td>Just as the flex-grow property proportionally stretches flex items, the flex-shrink property can be used to specify which elements will shrink and in what proportions.<br><br>
+
+                            The default value of flex-shrink is 1, which is why items shrink automatically if not declared otherwise.<br><br>
+                            
+                            Keep in mind, minimum and maximum widths will take precedence over flex-grow and flex-shrink. As with flex-grow, flex-shrink will only be employed if the parent container is too small or the browser is adjusted. <a href="resources/images/flex-shrink.png" title="Click to see an illustrative example" target="_blank">Visual Example</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>flex-basis
+                        </td>
+                        <td>In the example below, the .side divs will be 100 pixels wide and the .center div will be 150 pixels wide if the .container div has just the right amount of space:<br><br>
+                            .container {<br>
+                            display: flex;<br>
+                          }<br><br>
+                           
+                          .side {<br>
+                            flex-grow: 1;<br>
+                            flex-basis: 100px;<br>
+                          }<br><br>
+                           
+                          .center {<br>
+                            flex-grow: 2;<br>
+                            flex-basis: 150px;<br>
+                          }
+                        </td>
+                        <td>In the previous two properties, the dimensions of the divs were determined by heights and widths set with CSS.<br><br>
+                            
+                            Another way of specifying the width of a flex item is with the flex-basis property. It allows us to specify the width of an item before it stretches or shrinks. We can think of flex-basis as the width OR height (depending on flex-direction) of our flex items before they are constrained by a flex container. <a href="resources/images/flex-basis.png" title="Click to see an illustrative example" target="_blank">Visual Example of minimize versus full screen</a>
+                            <br><br>
+                            Also, a few notes about using flex-basis and width/height:<br><br>
+
+                            - flex-basis is limited by both max-width/max-height and min-width/min-height<br><br>
+                            - When declared, flex-basis will override the width/height property set on a flex container<br><br>
+                            - If no flex-basis is specified the default is the set width/height value, if width/height isn't specified the default is the width/height of the content<br><br>
+                            - When there is not enough space for our flex items our items will shrink at an even rate to fit within the container by default<br><br>
+                            - If there is too much space we can declare flex-grow: 1; on our flex items to make them grow at an even rate
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>flex
+                        </td>
+                        <td>.big {<br>
+                            flex: 2 1 150px;<br>
+                          }<br><br>
+                           
+                          .small {<br>
+                            flex: 1 2 100px;<br>
+                          }
+                        </td>
+                        <td>The shorthand flex property provides a convenient way for specifying how elements stretch and shrink, while simplifying the CSS required. The flex property allows you to declare <u>flex-grow</u>, <u>flex-shrink</u>, and <u>flex-basis</u> all in one line. <br><br>
+
+                            You can also declare flex-grow and flex-basis. Note that there is no way to set only flex-shrink and flex-basis using 2 values.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>flex-wrap
+                        </td>
+                        <td>In the example below, three flex items are contained by a parent flex container. The flex container is only 250 pixels wide so the three 100 pixel wide flex items cannot fit inline. The flex-wrap: wrap; setting causes the third, overflowing item to appear on a new line, below the other two items:<br><br>
+                            .container {<br>
+                            display: inline-flex;<br>
+                            flex-wrap: wrap;<br>
+                            width: 250px;<br>
+                          }<br><br>
+                           
+                          .item {<br>
+                            width: 100px;<br>
+                            height: 100px;<br>
+                          }
+                        </td>
+                        <td>Sometimes, we don't want our content to shrink to fit its container. Instead, we might want flex items to move to the next line when necessary. This can be declared with the flex-wrap property on <u>flex containers</u>. The flex-wrap property can accept three values: <a href="resources/images/flex-wrap.png" title="Click to see an illustrative example" target="_blank">Visual Example when minimized</a><br><br>
+
+                            - <strong>wrap</strong> — child elements of a flex container that don't fit into a row will move down to the next line<br><br>
+                            
+                            - <strong>wrap-reverse</strong> — the same functionality as wrap, but the order of rows within a flex container is reversed (for example, in a 2-row flexbox, the first row from a wrap container will become the second in wrap-reverse and the second row from the wrap container will become the first in wrap-reverse)<br><br>
+                            
+                            - <strong>nowrap</strong> — prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>align-content
+                        </td>
+                        <td>In the example below, there are four flex items inside of a flex container. The two rows of divs will be evenly spaced from top to bottom of the parent container with equal space before the first row and after the second (space-around), with double space between the rows.<br><br>
+                            .container {<br>
+                            display: flex;<br>
+                            width: 400px;<br>
+                            height: 400px;<br>
+                            flex-wrap: wrap;<br>
+                            align-content: space-around;<br>
+                          }<br><br>
+                           
+                          .child {<br>
+                            width: 150px;<br>
+                            height: 150px;<br>
+                          }
+                        </td>
+                        <td>We used align-items for aligning elements within a single row. If a flex container has multiple rows of content, we can use align-content to space the rows from top to bottom.<br><br>
+
+                            Below are some of the more commonly used align-content values:<a href="resources/images/align-content.png" title="Click to see an illustrative example" target="_blank">Visual Example</a><br><br>
+                            
+                            - <strong>flex-start</strong>: all rows of elements will be positioned at the top of the parent container with no extra space between.<br><br>
+                            
+                            - <strong>flex-end</strong>: all rows of elements will be positioned at the bottom of the parent container with no extra space between.<br><br>
+                            
+                            - <strong>center</strong>: all rows of elements will be positioned at the center of the parent element with no extra space between.<br><br>
+                            
+                            - <strong>space-between</strong>: all rows of elements will be spaced evenly from the top to the bottom of the container with no space above the first or below the last.<br><br>
+                            
+                            - <strong>space-around</strong>: all rows of elements will be spaced evenly from the top to the bottom of the container with the same amount of space at the top and bottom and between each element.<br><br>
+                            
+                            - <strong>stretch</strong>: if a minimum height or no height is specified, the rows of elements will stretch to fill the parent container from top to bottom (<u>default value</u>).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>   
+            
+
+            <footer>                
+                <p>Eric Moczydlowski | ericmoczydlowski@yahoo.com</p>                
+            </footer>
+            
+            <script src="" async defer></script>
+        </main>
+    </body>
+</html>
